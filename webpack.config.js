@@ -6,24 +6,29 @@ import { fileURLToPath } from "url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default {
-  entry: "./src/index.ts",
+  entry: "./src/index.js", // Входной файл
   output: {
     filename: "[name].js",
     path: path.resolve(__dirname, "docs"),
     publicPath: "/",
   },
   resolve: {
-    extensions: [".ts", ".js"],
+    extensions: [".js", ".jsx", ".ts", ".tsx"], // Добавлены расширения для JSX и TSX
   },
   module: {
     rules: [
       {
-        test: /\.ts$/,
+        test: /\.(js|jsx|ts|tsx)$/, // Обработка файлов .js, .jsx, .ts и .tsx
         exclude: /(node_modules|bower_components)/,
         use: {
           loader: "babel-loader",
           options: {
-            presets: ["@babel/preset-env"],
+            presets: [
+              "@babel/preset-env",
+              "@babel/preset-react", // Добавлен пресет для React
+              "@babel/preset-typescript", // Добавлен пресет для TypeScript
+              "@babel/preset-flow" // Добавлен пресет для Flow
+            ],
             plugins: ["@babel/plugin-proposal-object-rest-spread"],
           },
         },
@@ -51,9 +56,9 @@ export default {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: "./src/index.html", // Укажите путь к вашему HTML-шаблону
+      template: "./src/index.html",
       filename: "index.html",
     }),
   ],
-  mode: "development", // или "production" в зависимости от ваших нужд
+  mode: "development",
 };
