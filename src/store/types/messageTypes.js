@@ -19,5 +19,3 @@ export const MessageTypes = {
 export const MessageState = {
   messages: [],
 };
-
-

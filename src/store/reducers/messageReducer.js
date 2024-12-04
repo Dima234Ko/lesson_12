@@ -1,6 +1,10 @@
 // src/store/reducers/messageReducer.js
 
-import { FETCH_MESSAGES, SEND_MESSAGE, initialMessageState } from "../types/messageTypes.js";
+import {
+  FETCH_MESSAGES,
+  SEND_MESSAGE,
+  initialMessageState,
+} from "../types/messageTypes.js";
 
 const messageReducer = (state = initialMessageState, action) => {
   switch (action.type) {

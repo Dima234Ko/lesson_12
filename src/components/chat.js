@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchMessages, sendMessage } from "../store/actions/messageActions.js";
 
-
 const emojiMap = {
   ":)": "path/to/smile.png",
   ":(": "path/to/sad.png",
@@ -10,7 +9,11 @@ const emojiMap = {
 };
 
 const replaceEmojis = (text) => {
-  return text.replace(/:\)|:\(|:D/g, (match) => `<img src="${emojiMap[match]}" alt="${match}" style="width:20px;height:20px;">`);
+  return text.replace(
+    /:\)|:\(|:D/g,
+    (match) =>
+      `<img src="${emojiMap[match]}" alt="${match}" style="width:20px;height:20px;">`,
+  );
 };
 
 const Chat = () => {
@@ -39,7 +42,9 @@ const Chat = () => {
       <div className="messages">
         {messages.map((msg) => (
           <div key={msg.id} className="message">
-            <div dangerouslySetInnerHTML={{ __html: replaceEmojis(msg.text) }} />
+            <div
+              dangerouslySetInnerHTML={{ __html: replaceEmojis(msg.text) }}
+            />
           </div>
         ))}
       </div>

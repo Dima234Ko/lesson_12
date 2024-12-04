@@ -1,0 +1,41 @@
+[33mcommit e3b64c670bf5731b2540b1bcdb1eab4e69d4ee91[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mredux[m[33m)[m
+Author: User <esipov@sv-en.ru>
+Date:   Thu Dec 5 00:07:31 2024 +0300
+
+    попытка перехода на ts
+
+[33mcommit fb9370fe35a3a4ca2b88d70661a8d0dd4483e2b1[m[33m ([m[1;31morigin/redux[m[33m)[m
+Author: User <esipov@sv-en.ru>
+Date:   Wed Dec 4 22:32:59 2024 +0300
+
+    добавлены смайлики
+
+[33mcommit 90ea0e015c78ec43f8c0685d644b06df585263a9[m
+Author: User <esipov@sv-en.ru>
+Date:   Wed Dec 4 16:42:27 2024 +0300
+
+    firebase вроде прикручен
+
+[33mcommit 189233593ccd1184f690b44befbecf153f8aaeb6[m
+Author: User <esipov@sv-en.ru>
+Date:   Sun Dec 1 22:47:01 2024 +0300
+
+    проект временно переписан на js, необходимо разобраться с firebase
+
+[33mcommit 9c16739c4f1006b06f6ae09b89ba7b304176b68c[m
+Author: User <esipov@sv-en.ru>
+Date:   Tue Nov 26 15:05:34 2024 +0300
+
+    исправлены стиоистические ошибки
+
+[33mcommit 7d8eb223eaa446ce82a84b46c74058cb26c87c16[m
+Author: User <esipov@sv-en.ru>
+Date:   Tue Nov 26 15:03:25 2024 +0300
+
+    разработана структура redux
+
+[33mcommit e3d16c678999fed1d662b2218b701686dce4254d[m[33m ([m[1;31morigin/main[m[33m, [m[1;32mmain[m[33m)[m
+Author: User <esipov@sv-en.ru>
+Date:   Tue Nov 26 14:55:55 2024 +0300
+
+    first commit

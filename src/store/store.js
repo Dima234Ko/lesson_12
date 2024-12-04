@@ -1,10 +1,10 @@
 // src/store/store.js
 
 import { createStore, applyMiddleware } from "redux";
-import { thunk } from 'redux-thunk';
+import { thunk } from "redux-thunk";
 
 import { combineReducers } from "redux";
-import messageReducer from "./reducers/messageReducer.js"; 
+import messageReducer from "./reducers/messageReducer.js";
 
 // Объединяем редьюсеры
 const rootReducer = combineReducers({
@@ -12,9 +12,6 @@ const rootReducer = combineReducers({
 });
 
 // Создаем хранилище с middleware
-const store = createStore(
-  rootReducer,
-  applyMiddleware(thunk)
-);
+const store = createStore(rootReducer, applyMiddleware(thunk));
 
 export default store;

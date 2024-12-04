@@ -7,4 +7,3 @@ export const FETCH_USERS = "FETCH_USERS";
 export const initialUserState = {
   users: [], // Array of users
 };
-

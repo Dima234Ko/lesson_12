@@ -1,7 +1,7 @@
 import { collection, getDocs, addDoc } from "firebase/firestore";
-import { db } from '../../firebaseConfig.js';
+import { db } from "../../firebaseConfig.js";
 import { FETCH_MESSAGES, SEND_MESSAGE } from "../types/messageTypes.js";
-import { replaceEmojisWithImages } from '../../utils/emojiUtils.js';
+import { replaceEmojisWithImages } from "../../utils/emojiUtils.js";
 
 // Получение сообщений
 export const fetchMessages = () => {
@@ -9,7 +9,7 @@ export const fetchMessages = () => {
     try {
       const messagesCollection = collection(db, "messages");
       const snapshot = await getDocs(messagesCollection);
-      const messages = snapshot.docs.map(doc => ({
+      const messages = snapshot.docs.map((doc) => ({
         id: doc.id,
         ...doc.data(),
         text: replaceEmojisWithImages(doc.data().text), // Применяем замену

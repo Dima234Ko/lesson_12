@@ -27,7 +27,7 @@ export default {
               "@babel/preset-env",
               "@babel/preset-react", // Добавлен пресет для React
               "@babel/preset-typescript", // Добавлен пресет для TypeScript
-              "@babel/preset-flow" // Добавлен пресет для Flow
+              "@babel/preset-flow", // Добавлен пресет для Flow
             ],
             plugins: ["@babel/plugin-proposal-object-rest-spread"],
           },
