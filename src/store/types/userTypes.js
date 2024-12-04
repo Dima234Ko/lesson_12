@@ -1,17 +1,10 @@
+// src/store/types/userTypes.js
+
+// Define a constant for the action
 export const FETCH_USERS = "FETCH_USERS";
 
-export interface User {
-  id: string;
-  name: string;
-}
+// Define the initial state
+export const initialUserState = {
+  users: [], // Array of users
+};
 
-export interface FetchUsersAction {
-  type: typeof FETCH_USERS;
-  payload: User[];
-}
-
-export type UserActionTypes = FetchUsersAction;
-
-export interface UserState {
-  users: User[];
-}

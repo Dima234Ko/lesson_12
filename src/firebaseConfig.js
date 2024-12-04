@@ -1,6 +1,7 @@
-// firebaseConfig.js
-import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore"; // Импортируйте Firestore
+import "firebase/firestore";
+import { initializeApp } from 'firebase/app';
+import { getFirestore } from 'firebase/firestore';
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyBBV_nkgxUYvtprj8po6SJZfrOL8hXgITA",
@@ -12,9 +13,6 @@ const firebaseConfig = {
   measurementId: "G-36679BL5J8"
 };
 
-// Инициализация Firebase
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app); // Инициализация Firestore
 
-// Экспортируйте db для использования в других частях приложения
-export { db };
+const app = initializeApp(firebaseConfig);
+export const db = getFirestore(app);
