@@ -1,6 +1,7 @@
 import { collection, getDocs, addDoc } from "firebase/firestore";
 import { db } from '../../firebaseConfig.js';
 import { FETCH_MESSAGES, SEND_MESSAGE } from "../types/messageTypes.js";
+import { replaceEmojisWithImages } from '../../utils/emojiUtils.js';
 
 // Получение сообщений
 export const fetchMessages = () => {
@@ -11,6 +12,7 @@ export const fetchMessages = () => {
       const messages = snapshot.docs.map(doc => ({
         id: doc.id,
         ...doc.data(),
+        text: replaceEmojisWithImages(doc.data().text), // Применяем замену
       }));
 
       dispatch({ type: FETCH_MESSAGES, payload: messages });
@@ -24,8 +26,14 @@ export const fetchMessages = () => {
 export const sendMessage = (message) => {
   return async (dispatch) => {
     try {
-      const docRef = await addDoc(collection(db, "messages"), message);
-      const newMessage = { id: docRef.id, ...message };
+      // Заменяем смайлы на изображения
+      const modifiedMessage = {
+        ...message,
+        text: replaceEmojisWithImages(message.text),
+      };
+
+      const docRef = await addDoc(collection(db, "messages"), modifiedMessage);
+      const newMessage = { id: docRef.id, ...modifiedMessage };
       dispatch({ type: SEND_MESSAGE, payload: newMessage });
     } catch (error) {
       console.error("Ошибка при отправке сообщения:", error);
