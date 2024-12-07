@@ -29,7 +29,7 @@ const Chat = () => {
     if (messageText.trim()) {
       const message = {
         text: messageText,
-        senderId: 1, // Замените на реальный ID пользователя
+        senderId: 1,
         timestamp: new Date(),
       };
       dispatch(sendMessage(message));

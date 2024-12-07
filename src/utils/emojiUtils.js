@@ -1,4 +1,3 @@
-// emojiUtils.js
 import emojiMap from "./emojiMap.js";
 
 export const replaceEmojisWithImages = (text) => {

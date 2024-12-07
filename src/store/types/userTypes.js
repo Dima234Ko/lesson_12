@@ -1,9 +1,7 @@
-// src/store/types/userTypes.js
-
-// Define a constant for the action
+// Определяем константы для действий
 export const FETCH_USERS = "FETCH_USERS";
 
-// Define the initial state
+// Определяем начальное состояние
 export const initialUserState = {
   users: [], // Array of users
 };

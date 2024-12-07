@@ -1,5 +1,3 @@
-// src/store/reducers/messageReducer.js
-
 import {
   FETCH_MESSAGES,
   SEND_MESSAGE,
@@ -13,7 +11,7 @@ const messageReducer = (state = initialMessageState, action) => {
     case SEND_MESSAGE:
       return { ...state, messages: [...state.messages, action.payload] };
     default:
-      return state; // Возвращаем текущее состояние, если действие не распознано
+      return state;
   }
 };
 

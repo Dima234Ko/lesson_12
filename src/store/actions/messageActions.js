@@ -12,7 +12,7 @@ export const fetchMessages = () => {
       const messages = snapshot.docs.map((doc) => ({
         id: doc.id,
         ...doc.data(),
-        text: replaceEmojisWithImages(doc.data().text), // Применяем замену
+        text: replaceEmojisWithImages(doc.data().text),
       }));
 
       dispatch({ type: FETCH_MESSAGES, payload: messages });

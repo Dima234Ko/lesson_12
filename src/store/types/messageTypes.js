@@ -1,12 +1,10 @@
-// src/store/types/messageTypes.js
-
 // Определяем константы для действий
 export const FETCH_MESSAGES = "FETCH_MESSAGES";
 export const SEND_MESSAGE = "SEND_MESSAGE";
 
 // Определяем начальное состояние
 export const initialMessageState = {
-  messages: [], // Массив сообщений
+  messages: [],
 };
 
 // Экспортируем типы сообщений
