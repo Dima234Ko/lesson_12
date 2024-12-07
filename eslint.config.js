@@ -6,19 +6,19 @@ export default [
   {
     languageOptions: {
       globals: globals.browser,
-      parser: babelEslint, 
+      parser: babelEslint,
       parserOptions: {
-        requireConfigFile: false, 
-        ecmaVersion: 2021, 
+        requireConfigFile: false,
+        ecmaVersion: 2021,
         sourceType: "module",
         ecmaFeatures: {
-          jsx: true, 
+          jsx: true,
         },
       },
     },
     rules: {
-      "no-unused-vars": "off", 
-      "no-console": "off", 
+      "no-unused-vars": "off",
+      "no-console": "off",
     },
   },
 ];
